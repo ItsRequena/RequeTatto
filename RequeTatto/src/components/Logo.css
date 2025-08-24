@@ -1,0 +1,33 @@
+.logo {
+  height: 500px;
+  padding: 1.5em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: dropAndZoom 1.8s ease-out forwards;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1em orange);
+}
+
+
+@keyframes dropAndZoom {
+  0% {
+    top: -500px;             /* Empieza arriba */
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    top: 50%;  
+    left: 50%;               /* Llega al centro */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    top: 1000px;  
+    /* left: -500px;          */
+    opacity: 0;             
+    transform: translate(-50%, -50%) scale(1); /* Crece mucho */
+  }
+}
