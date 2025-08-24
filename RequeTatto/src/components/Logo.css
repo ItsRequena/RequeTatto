@@ -7,11 +7,6 @@
   animation: dropAndZoom 1.8s ease-out forwards;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 1em orange);
-}
-
-
 @keyframes dropAndZoom {
   0% {
     top: -500px;             /* Empieza arriba */

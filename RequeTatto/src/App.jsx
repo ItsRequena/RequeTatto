@@ -10,7 +10,7 @@ function App() {
     <>
       <Logo/>
       <Menu/>
-      <h1>Sergio Requena</h1>
+      <h1>Nombre Apellido</h1>
     </>
   )
 }

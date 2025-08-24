@@ -25,7 +25,7 @@ button:active {
     position: fixed;
     top: 0;
     left: 0;
-    width: 240px;
+    width: 200px;
     height: 100%;
     /* background-color: light dark; */
     background-color: #252424;
@@ -94,3 +94,21 @@ button:active {
     font-size: 1rem;
 }
 
+.menuBottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.menuLogo {
+  height: 200px;
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 50px;
+}
+
+.createdBy {
+  color: rgb(100, 100, 100);
+  font-size: 1rem;
+  padding: 15px 30px;
+}
