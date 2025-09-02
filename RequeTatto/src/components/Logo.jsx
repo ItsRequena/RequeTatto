@@ -1,5 +1,5 @@
 import requeTattoLogo from '../images/newRequeTattoLogo.png'
-import './Logo.css'
+import '../styles/Logo.css'
 
 export function Logo(){
     return (

@@ -1,0 +1,35 @@
+.mainMenu{
+    animation: fade 1.8s ease-out forwards;
+  text-align: center;
+}
+
+.fotoPerfil{
+    width:  250px;
+    height: 250px;
+    display: inline-block;
+    background: grey;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0.5, 0, 0, 0.5);
+}
+
+.googleMaps{
+    width:  200px;
+    height: 200px;
+    border-radius: 2%; 
+}
+
+.fuente{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;             
+  }
+}
