@@ -5,7 +5,7 @@ import { Logo } from './components/Logo.jsx'
 import { Main } from './components/Main.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [view, setView] = useState(0)
 
   return (
     <>

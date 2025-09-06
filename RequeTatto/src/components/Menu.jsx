@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import requeTattoLogo from '../images/newRequeTattoLogo.png'
 import iconoMaquinaTatuar from '../images/iconoMaquinaTatuar.png'
 import '../styles/Menu.css'; 
+import { openInstagram } from '../services/openInstagram'
 
 export function Menu() {
 
@@ -12,10 +13,6 @@ export function Menu() {
   const openGame = async (game) => {
     setGameType(game);
     toggleMenu();
-  }
-
-  const openGithub = (game) => {
-    window.open("https://github.com/ItsRequena");
   }
 
   return (
@@ -79,8 +76,8 @@ export function Menu() {
             <ul>
                 <li>
                   <div className='menuBottom'>
-                    <img onClick={() => openGithub()} src={requeTattoLogo} className='menuLogo' alt="RequeTatto logo" />
-                    <h4 className='createdBy' href="#">Created by ItsRequena</h4>
+                    <img onClick={openInstagram} src={requeTattoLogo} className='menuLogo' alt="RequeTatto logo" />
+                    {/* <h4 className='createdBy' href="#">Created by ItsRequena</h4> */}
                   </div>
                 </li>
             </ul>

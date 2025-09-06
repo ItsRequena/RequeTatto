@@ -1,12 +1,22 @@
 .mainMenu{
-    animation: fade 1.8s ease-out forwards;
+  animation: fade 1.8s ease-out forwards;
   text-align: center;
+  margin-top: 20%;
 }
 
 .fotoPerfil{
-    width:  250px;
-    height: 250px;
+    width:  300px;
+    height: 300px;
     display: inline-block;
+    background: grey;
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px rgba(0.5, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.imgPortada{
+    width:  160px;
+    height: 160px;
     background: grey;
     border-radius: 5px;
     box-shadow: 0px 10px 30px rgba(0.5, 0, 0, 0.5);
@@ -18,8 +28,46 @@
     border-radius: 2%; 
 }
 
+.contact-box {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  margin-left: 20%;
+}
+
+.ul-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li-contact {
+  display: flex;
+  align-items: center; 
+  gap: 4px; 
+}
+
+.li-contact a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* para que el texto herede el color y no se ponga azul */
+}
+
+.li-contact a:hover {
+  opacity: 0.8; /* efecto al pasar el mouse */
+}
+
+.tattocover{
+  display: flex;         /* pone los <li> en fila */
+  gap: 10px;             /* espacio entre imágenes */
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;   /* centra verticalmente */
+}
+
 .fuente{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 50px;
 }
 
 @keyframes fade {
