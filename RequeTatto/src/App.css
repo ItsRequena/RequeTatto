@@ -5,3 +5,11 @@
   text-align: center;
 }
 
+/* .app-content {
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+.app-content.menu-open {
+  margin-left: 200px; 
+} */

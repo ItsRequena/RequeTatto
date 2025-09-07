@@ -24,9 +24,8 @@ button:active {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 185px;
     height: 100%;
-    /* background-color: light dark; */
     background-color: #252424;
     box-shadow: 0 0 2px rgb(68, 68, 68);
     transform: translateX(-100%);
@@ -63,8 +62,9 @@ button:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 95%; /* o la altura deseada */
+  height: 100%; 
 }
+
 
 .side-menu a {
     font-size: 1em;      /* Ajusta al tamaño típico de un h4 */
@@ -82,7 +82,7 @@ button:active {
 }
 
 .side-menu a:hover:not(.blocked){
-    background-color: rgb(68, 68, 68);
+    background-color: #242424;
     border-left: 4px solid white;
     transform: scale(1.05);
     color: white;
@@ -94,17 +94,12 @@ button:active {
     font-size: 1rem;
 }
 
-.menuBottom{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
 .menuLogo {
   height: 200px;
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  bottom: 0;
   padding: 10px 50px;
+  left: 0;
 }
 
 .createdBy {
