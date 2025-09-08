@@ -1,5 +1,5 @@
 .mainMenu{
-  animation: fade 1.8s ease-out forwards;
+  animation: fade 0.5s ease-out forwards;
   text-align: center;
   margin-top: 20%;
 }
@@ -51,18 +51,18 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: inherit; /* para que el texto herede el color y no se ponga azul */
+  color: inherit; 
 }
 
 .li-contact a:hover {
-  opacity: 0.8; /* efecto al pasar el mouse */
+  opacity: 0.8; 
 }
 
 .tattocover{
-  display: flex;         /* pone los <li> en fila */
-  gap: 10px;             /* espacio entre imágenes */
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;   /* centra verticalmente */
+  display: flex;         
+  gap: 10px;             
+  justify-content: center; 
+  align-items: center;   
 }
 
 .fuente{

@@ -9,20 +9,19 @@
 
 @keyframes dropAndZoom {
   0% {
-    top: -500px;             /* Empieza arriba */
+    top: -500px;             
     opacity: 1;
     transform: translateX(-50%) scale(1);
   }
   50% {
     top: 50%;  
-    left: 50%;               /* Llega al centro */
+    left: 50%;               
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
   100% {
     top: 1000px;  
-    /* left: -500px;          */
     opacity: 0;             
-    transform: translate(-50%, -50%) scale(1); /* Crece mucho */
+    transform: translate(-50%, -50%) scale(1); 
   }
 }

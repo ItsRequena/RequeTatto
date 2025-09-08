@@ -48,7 +48,7 @@ export function Menu() {
                     </a>
                 </li>
                 <li>
-                  <a href="#" onClick={() => openView('contact')}>
+                  <a href="#" onClick={() => openView('main')}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" role="img" aria-label="Usuario">
                         <path fill="currentColor" d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-5 0-9 2.7-9 6v1h18v-1c0-3.3-4-6-9-6Z"/>
                       </svg>

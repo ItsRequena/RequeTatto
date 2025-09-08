@@ -2,10 +2,10 @@ import { useContext } from 'react'
 import fotoPerfil from '../images/fotoPerfil.jpg'
 import chicana from '../images/tattos/chicana.jpg'
 import ojoscatrina from '../images/tattos/ojoscatrina.jpg'
+import { OptionContext } from '../context/option.jsx'
 import { openInstagram } from '../services/openInstagram'
 import { openMail } from '../services/openMail'
 import '../styles/Main.css'
-import { OptionContext } from '../context/option.jsx'
 
 export function Main(){
     const {isMenuOpen} = useContext(OptionContext)

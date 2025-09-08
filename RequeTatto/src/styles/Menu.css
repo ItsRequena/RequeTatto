@@ -11,7 +11,7 @@
 }
 
 button:hover {
-  border-color: #252424; /* cambia el borde al pasar el mouse */
+  border-color: #252424; 
 }
 
 button:focus,
@@ -19,7 +19,6 @@ button:active {
   outline: none;
 }
 
-/* Contenedor del menú */
 .side-menu {
     position: fixed;
     top: 0;
@@ -32,15 +31,13 @@ button:active {
     transition: transform 0.3s ease;
     padding: 1rem;
     z-index: 999;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
-/* Estado abierto */
 .side-menu.open {
   transform: translateX(0);
 }
 
-/* Contenido del menú */
 .side-menu .menu-title {
   margin-top: 10px;
   font-size: 1.2rem;
@@ -67,15 +64,15 @@ button:active {
 
 
 .side-menu a {
-    font-size: 1em;      /* Ajusta al tamaño típico de un h4 */
+    font-size: 1em;      
     font-weight: bold;
     margin: 1em 0;
-    display: flex;        /* Para que se comporte como un h4 si lo necesitas */
-    color: inherit;        /* Usa el color del texto por defecto */
-    text-decoration: none; /* Quita el subrayado */
+    display: flex;        
+    color: inherit;        
+    text-decoration: none; 
     color: white;
-    align-items: center;      /* Centra verticalmente */
-    gap: 8px;                 /* Espacio entre ícono y texto */
+    align-items: center;      
+    gap: 8px;                 
 
   padding: 5px 5px;
   transition: all 0.2s ease;

@@ -1,0 +1,111 @@
+.page {
+  animation: fade 1s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tatto-leaf {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  /* Máximo 3 columnas, se adaptan a 2 o 1 según el ancho disponible */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  width: 100%;
+  gap: 32px;
+  justify-items: center; /* centra los items dentro de su celda */
+}
+
+
+.tatto {
+  text-align: center;
+}
+
+.tatto img {
+  margin-top: 16px;
+  width: 300px;
+  height: 300px;
+  background: grey;
+  border-radius: 5px;
+  box-shadow: 0px 5px 20px rgba(0.5, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.tatto img:hover {
+  transform: scale(1.05); /* Zoom al pasar el ratón */
+}
+
+/* Modal */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px rgba(0,0,0,0.7);
+}
+
+
+.more-tatto-button {
+  background: linear-gradient(45deg, #252424);
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border: 1px solid;
+  padding: 12px 24px;
+  border-radius: 10px;     
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background-size: 200% auto; 
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+.more-tatto-button:hover {
+  background-position: right center; 
+  background: #fa7e1e;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
+}
+
+.more-tatto-button:active {
+    background: #fa7e1e;
+  transform: scale(0.95);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;             
+  }
+}
+
+
