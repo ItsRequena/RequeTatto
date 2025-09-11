@@ -16,7 +16,7 @@ import serpiente from '../images/tattos/serpiente.jpg'
 import thanos from '../images/tattos/thanos.jpg'
 import ranacolor from '../images/tattos/rana-color.jpg'
 
-import { openInstagram } from '../services/openInstagram'
+import { openInstagramProfile } from '../services/instagram'
 
 import '../styles/TattoGallery.css'
 import { useEffect, useState } from 'react'
@@ -101,7 +101,7 @@ export function TattoGallery(){
                     <li>
                     </li>
                      <li>
-                        <button onClick={openInstagram} className='more-tatto-button'>MAS TATUAJES</button>
+                        <button onClick={openInstagramProfile} className='more-tatto-button'>MAS TATUAJES</button>
                     </li>
                 </ul>
             </main>

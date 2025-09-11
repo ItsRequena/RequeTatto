@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import requeTattoLogo from '../images/newRequeTattoLogo.png'
 import iconoMaquinaTatuar from '../images/iconoMaquinaTatuar.png'
 import '../styles/Menu.css'; 
-import { openInstagram } from '../services/openInstagram'
+import { openInstagramProfile } from '../services/instagram.js'
 import { OptionContext } from '../context/option';
 
 export function Menu() {
@@ -77,7 +77,7 @@ export function Menu() {
             <ul>
                 <li>
                   <div className='menuBottom'>
-                    <img onClick={openInstagram} src={requeTattoLogo} className='menuLogo' alt="RequeTatto logo" />
+                    <img onClick={openInstagramProfile} src={requeTattoLogo} className='menuLogo' alt="RequeTatto logo" />
                   </div>
                 </li>
             </ul>

@@ -1,12 +1,20 @@
+import { useEffect, useState } from 'react'
+/* Listado de tatuajes*/
+import elitefightclub from '../images/leafs/elitefightclub.jpg'
+import galaxyfc from '../images/leafs/galaxyfc.jpg'
+
+import { openEliteFightClubLeaf, openGalaxyFcLeaf } from '../services/instagram'
+import '../styles/Leafs.css'
+
 export function Leafs(){
 
     const [expandedImageUrl, setExpandedImageUrl] = useState('')
 
     useEffect(() => {
-        openTatto()
+        openLeaf()
     }, [expandedImageUrl])
 
-    const openTatto = () => {
+    const openLeaf = () => {
         if(expandedImageUrl !== ''){
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
@@ -15,7 +23,7 @@ export function Leafs(){
         }
     }
 
-    return (
+return (
         <>
         <div className='page'>
             <header>
@@ -26,12 +34,14 @@ export function Leafs(){
                 <div className="modal" id="imageModal" onClick={() => setExpandedImageUrl('')} >
                     <img id="modalImage" src={null} alt="Imagen ampliada"></img>
                 </div>}
-                <ul>
-                    <li>
-
+                <ul className='leaf-box'>
+                    <li className='leaf'>
+                        <img onClick={() => setExpandedImageUrl(elitefightclub)} alt="elitefightclub" src={elitefightclub}></img>
+                        <button onClick={openEliteFightClubLeaf} className='buy-leaf-button'>COMPRAR</button>
                     </li>
-                    <li>
-
+                    <li className='leaf'>
+                        <img onClick={() => setExpandedImageUrl(galaxyfc)} alt="galaxyfc" src={galaxyfc}></img>
+                        <button onClick={openGalaxyFcLeaf} className='buy-leaf-button'>COMPRAR</button>
                     </li>
                 </ul>
             </main>

@@ -5,6 +5,7 @@ import { Logo } from './components/Logo.jsx'
 import { Main } from './components/Main.jsx'
 import { OptionContext } from './context/option.jsx'
 import { TattoGallery } from './components/TattoGallery.jsx'
+import { Leafs } from './components/Leafs.jsx'
 
 function App() {
   const {option, isMenuOpen} = useContext(OptionContext)
@@ -16,6 +17,7 @@ function App() {
       <div className={`app-content ${isMenuOpen ? "menu-open" : ""}`}>
         {option === 'main' && <Main/>}
         {option === 'tatto' && <TattoGallery/>}
+        {option === 'leafs' && <Leafs/>}
       </div>
     </>
   )
