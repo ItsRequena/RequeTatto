@@ -1,14 +1,12 @@
-import { useContext } from 'react'
 import fotoPerfil from '../images/fotoPerfil.jpg'
 import chicana from '../images/tattos/chicana.jpg'
 import ojoscatrina from '../images/tattos/ojoscatrina.jpg'
-import { OptionContext } from '../context/option.jsx'
 import { openInstagramProfile } from '../services/instagram.js'
 import { openMail } from '../services/openMail'
+import zonazerologo from '../images/zonazerologo.png'
 import '../styles/Main.css'
 
 export function Main(){
-    const {isMenuOpen} = useContext(OptionContext)
 
     return (
         <>
@@ -16,7 +14,9 @@ export function Main(){
             <img className='fotoPerfil' alt="Foto del perfil de reque.tattoo" src={fotoPerfil}></img>
             <h2 className='fuente'> Sergio Requena</h2>
             <div>
-                <p>Tatuador joven con amplia experiencia en realismo, especializado en capturar con precisión cada detalle y dotar a sus obras de un acabado natural y expresivo</p>
+                <p className='descripcion'>
+                    Tatuador joven con amplia experiencia en realismo, especializado en capturar con precisión cada detalle y dotar a sus obras de un acabado natural y expresivo
+                </p>
                 <br></br>
                 <div className='tattocover'>
                     <img className='imgPortada' alt="Tatuaje portada 1" src={chicana}></img>
@@ -41,7 +41,11 @@ export function Main(){
             <h2 className='fuente'>Ubicación </h2>
             <div>
                 <iframe className='googleMaps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.394088346714!2d-3.756039899999999!3d40.333603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4189befb20fd87%3A0xbb5c41c7ba33f275!2sZONA%20ZERO%20TATTOO%20%26%20PIERCING!5e0!3m2!1ses!2ses!4v1756841530749!5m2!1ses!2ses" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                <p>C. de la Rioja, 28, 28915 Leganés, Madrid</p>
+                <p className='zona-zero-location'>C. de la Rioja, 28, 28915 Leganés, Madrid</p>
+                <div className='zona-zero-info'>
+                    <img className='zona-zero-logo' alt="zonazerologo" src={zonazerologo}></img>
+                    <p>Zona Zero Tatto</p>
+                </div>
             </div>
 
         </div>

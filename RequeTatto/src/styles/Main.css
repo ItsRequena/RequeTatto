@@ -1,7 +1,7 @@
 .mainMenu{
   animation: fade 0.5s ease-out forwards;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 30px;
 }
 
 .fotoPerfil{
@@ -23,16 +23,15 @@
 }
 
 .googleMaps{
-    width:  200px;
-    height: 200px;
-    border-radius: 2%; 
+  margin-top: 10px;
+  width:  200px;
+  height: 200px;
+  border-radius: 2%; 
 }
 
 .contact-box {
   display: flex;
-  flex-direction: column; 
   justify-content: center;
-  margin-left: 20%;
 }
 
 .ul-contact {
@@ -69,6 +68,29 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-top: 50px;
 }
+
+.descripcion{
+  width:  300px;
+  display: inline-block;
+}
+
+.zona-zero-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.zona-zero-info {
+  display: flex;                   
+  justify-content: center; 
+  align-items: center;   
+  gap: 4px; 
+  margin-bottom: 0px;
+}
+
+.zona-zero-location {
+  margin-bottom: 0px;
+}
+
 
 @keyframes fade {
   0% {

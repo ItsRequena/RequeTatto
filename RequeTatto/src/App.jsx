@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-      {/* <Logo/> */}
       <Menu/>
       <div className={`app-content ${isMenuOpen ? "menu-open" : ""}`}>
         {option === 'main' && <Main/>}

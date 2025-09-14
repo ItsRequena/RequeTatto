@@ -15,6 +15,8 @@ import odin from '../images/tattos/odin.jpg'
 import serpiente from '../images/tattos/serpiente.jpg'
 import thanos from '../images/tattos/thanos.jpg'
 import ranacolor from '../images/tattos/rana-color.jpg'
+import relojarena from '../images/tattos/relojarena.jpg'
+import thor from '../images/tattos/thor.jpg'
 
 import { openInstagramProfile } from '../services/instagram'
 
@@ -41,9 +43,6 @@ export function TattoGallery(){
     return (
         <>
         <div className='page'>
-            <header>
-                <h2></h2>
-            </header>
             <main >
                 {expandedImageUrl && 
                 <div className="modal" id="imageModal" onClick={() => setExpandedImageUrl('')} >
@@ -75,6 +74,12 @@ export function TattoGallery(){
                         <img onClick={() => setExpandedImageUrl(thanos)} alt="thanos" src={thanos}></img>
                     </li>
                     <li className='tatto'>
+                        <img onClick={() => setExpandedImageUrl(relojarena)} alt="relojarena" src={relojarena}></img>
+                    </li>
+                    <li className='tatto'>
+                        <img onClick={() => setExpandedImageUrl(thor)} alt="thor" src={thor}></img>
+                    </li>
+                    <li className='tatto'>
                         <img onClick={() => setExpandedImageUrl(anubis)} alt="anubis" src={anubis}></img>
                     </li>
                     <li className='tatto'>
@@ -100,11 +105,13 @@ export function TattoGallery(){
                     </li>
                     <li>
                     </li>
-                     <li>
-                        <button onClick={openInstagramProfile} className='more-tatto-button'>MAS TATUAJES</button>
-                    </li>
                 </ul>
             </main>
+            <footer>
+                <div className='more-tatto'>
+                    <button onClick={openInstagramProfile} className='more-tatto-button'>MAS TATUAJES</button>
+                </div>
+            </footer>
         </div>
         </>
     )

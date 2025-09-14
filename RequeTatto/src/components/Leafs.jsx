@@ -27,7 +27,6 @@ return (
         <>
         <div className='page'>
             <header>
-                <h2></h2>
             </header>
             <main >
                 {expandedImageUrl && 
@@ -36,10 +35,12 @@ return (
                 </div>}
                 <ul className='leaf-box'>
                     <li className='leaf'>
+                        <h2 className='fuente'>Élite Fight Club</h2>
                         <img onClick={() => setExpandedImageUrl(elitefightclub)} alt="elitefightclub" src={elitefightclub}></img>
                         <button onClick={openEliteFightClubLeaf} className='buy-leaf-button'>COMPRAR</button>
                     </li>
                     <li className='leaf'>
+                        <h2 className='fuente'>Galaxy FC</h2>
                         <img onClick={() => setExpandedImageUrl(galaxyfc)} alt="galaxyfc" src={galaxyfc}></img>
                         <button onClick={openGalaxyFcLeaf} className='buy-leaf-button'>COMPRAR</button>
                     </li>
