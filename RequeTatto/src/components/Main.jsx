@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import fotoPerfil from '../images/fotoPerfil.jpg'
+import fotoPerfilBack from '../images/newRequeTattoLogo.png'
 import chicana from '../images/tattos/chicana.jpg'
 import ojoscatrina from '../images/tattos/ojoscatrina.jpg'
 import { openInstagramProfile } from '../services/instagram.js'
@@ -7,17 +9,31 @@ import zonazerologo from '../images/zonazerologo.png'
 import '../styles/Main.css'
 
 export function Main(){
+    const [flipped, setFlipped] = useState(false)
 
     return (
         <>
         <div className='mainMenu'>
-            <img className='fotoPerfil' alt="Foto del perfil de reque.tattoo" src={fotoPerfil}></img>
+            {/* <img className='fotoPerfil' alt="Foto del perfil de reque.tattoo" src={fotoPerfil}></img> */}
+            <div 
+                className={`flip-card ${flipped ? 'flipped' : ''}`} 
+                onClick={() => setFlipped(!flipped)}
+            >
+                <div className="flip-card-inner">
+                    <div className="flip-card-front">
+                        <img className="fotoPerfil" src={fotoPerfil} alt="Foto del perfil" />
+                    </div>
+                    <div className="flip-card-back">
+                        <img className="fotoPerfil" src={fotoPerfilBack} alt="Foto reverso" />
+                    </div>
+                </div>
+            </div>
+            
             <h2 className='fuente'> Sergio Requena</h2>
             <div>
                 <p className='descripcion'>
                     Tatuador joven con amplia experiencia en realismo, especializado en capturar con precisión cada detalle y dotar a sus obras de un acabado natural y expresivo
                 </p>
-                <br></br>
                 <div className='tattocover'>
                     <img className='imgPortada' alt="Tatuaje portada 1" src={chicana}></img>
                     <img className='imgPortada' alt="Tatuaje portada 2" src={ojoscatrina}></img>

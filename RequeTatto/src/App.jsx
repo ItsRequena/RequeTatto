@@ -1,7 +1,6 @@
 import { useState,useContext } from 'react'
 import './App.css'
 import { Menu } from './components/Menu.jsx'
-import { Logo } from './components/Logo.jsx'
 import { Main } from './components/Main.jsx'
 import { OptionContext } from './context/option.jsx'
 import { TattoGallery } from './components/TattoGallery.jsx'

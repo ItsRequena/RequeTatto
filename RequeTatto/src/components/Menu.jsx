@@ -34,7 +34,7 @@ export function Menu() {
                 <li>
                   <a href="#" onClick={() => openView('tatto')}>
                     <img src={iconoMaquinaTatuar} style={{width:"16px", height:"16px"}}/>
-                      Galería de Tatuajes
+                      Tatuajes
                   </a>
                 </li>
                 <li>

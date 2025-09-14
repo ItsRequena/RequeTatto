@@ -4,22 +4,72 @@
   margin-top: 30px;
 }
 
-.fotoPerfil{
-    width:  300px;
-    height: 300px;
-    display: inline-block;
-    background: grey;
-    border-radius: 5px;
-    box-shadow: 0px 10px 30px rgba(0.5, 0, 0, 0.5);
-    margin-bottom: 30px;
+/* contenedor */
+.flip-card {
+  perspective: 1000px; 
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 30px auto; /* centrado + separación */
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* caras */
+.flip-card-front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px rgba(0.5, 0, 0, 0.5);
+} 
+
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; 
+  border-radius: 5px;
+}
+
+.flip-card-front img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  background: white;
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  background-color: #242424;
+}
+
+/* reverso */
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 
 .imgPortada{
-    width:  160px;
-    height: 160px;
-    background: grey;
-    border-radius: 5px;
-    box-shadow: 0px 5px 20px rgba(0.5, 0, 0, 0.5);
+  width:  160px;
+  height: 160px;
+  background: grey;
+  border-radius: 5px;
+  box-shadow: 0px 5px 20px rgba(0.5, 0, 0, 0.5);
 }
 
 .googleMaps{
@@ -43,6 +93,7 @@
 .li-contact {
   display: flex;
   align-items: center; 
+  justify-content: center;
   gap: 4px; 
 }
 
@@ -72,6 +123,7 @@
 .descripcion{
   width:  300px;
   display: inline-block;
+  margin-bottom: 30px;
 }
 
 .zona-zero-logo {
@@ -90,7 +142,6 @@
 .zona-zero-location {
   margin-bottom: 0px;
 }
-
 
 @keyframes fade {
   0% {
