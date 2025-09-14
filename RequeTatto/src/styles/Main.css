@@ -2,14 +2,74 @@
   animation: fade 0.5s ease-out forwards;
   text-align: center;
   margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr; 
+}
+
+.main-ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr; /* Por defecto: 1 columna (móvil) */
+
+}
+
+@media (min-width: 1300px) {
+  .main-ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1200px;   /* controla el ancho total de la grid */
+    margin: 0 auto;      /* centra la grid en la página */
+  }
+
+  /* cada <li> será un flex-column; align-items controla la alineación horizontal del contenido */
+  .main-ul > li {
+    display: flex;
+    flex-direction: column; /* mantiene el contenido en columna */
+    align-items: center;    /* por defecto, centrado */
+    width: 100%;
+  }
+
+  /* elementos que caen en la columna izquierda (índices impares) -> su contenido pegado a la derecha */
+  .main-ul > li:nth-child(odd) {
+    align-items: flex-end;
+  }
+
+  /* elementos que caen en la columna derecha (índices pares) -> su contenido pegado a la izquierda */
+  .main-ul > li:nth-child(even) {
+    align-items: flex-start;
+  }
+
+  /* EXCEPCIÓN: forzamos que el bloque "Contacto" (3º hijo) quede centrado */
+  .main-ul > li:nth-child(2) {
+    align-items: center;
+  }
+
+  /* EXCEPCIÓN: forzamos que el bloque "Contacto" (3º hijo) quede centrado */
+  .main-ul > li:nth-child(3) {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* EXCEPCIÓN: forzamos que el bloque "Contacto" (3º hijo) quede centrado */
+  .main-ul > li:nth-child(4) {
+    align-items: center;
+  }
+}
+
+.main-li {
+  justify-self: center;
+  align-items: center; 
 }
 
 /* contenedor */
 .flip-card {
   perspective: 1000px; 
-  width: 300px;
-  height: 300px;
-  margin: 0 auto 30px auto; /* centrado + separación */
+  width: 320px;
+  height: 408px;
   cursor: pointer;
 }
 
@@ -76,25 +136,20 @@
   margin-top: 10px;
   width:  200px;
   height: 200px;
-  border-radius: 2%; 
+  border-radius: 2%;  
 }
 
-.contact-box {
-  display: flex;
-  justify-content: center;
-}
-
-.ul-contact {
-  list-style: none;
+/* Asegúrate de que los elementos internos no tengan márgenes laterales inesperados */
+.contact-box, .ul-contact, .li-contact {
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .li-contact {
   display: flex;
-  align-items: center; 
-  justify-content: center;
-  gap: 4px; 
+  align-items: center;
+  gap: 8px;
 }
 
 .li-contact a {
@@ -112,12 +167,13 @@
   display: flex;         
   gap: 10px;             
   justify-content: center; 
-  align-items: center;   
+  align-items: center;  
 }
 
 .fuente{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-top: 50px;
+  align-items: center;  
 }
 
 .descripcion{
