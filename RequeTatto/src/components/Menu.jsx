@@ -69,7 +69,6 @@ export function Menu() {
                     <circle cx="12" cy="18" r="1"/>
                     <circle cx="17" cy="18" r="1"/>
                   </svg>
-
                     Reservas
                   </a>
                 </li>

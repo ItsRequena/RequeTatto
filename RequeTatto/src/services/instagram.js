@@ -9,3 +9,10 @@ export function openEliteFightClubLeaf(){
 export function openGalaxyFcLeaf(){
     window.open("https://www.instagram.com/p/DOLtWLVDO8Q/?img_index=1");
   }
+
+export function writeInstagramMessage(){
+    window.open("https://www.instagram.com/direct/t/107228400672931");
+  }
+
+
+  
