@@ -1,7 +1,7 @@
 import { useState } from "react";
 import '../styles/Calendar.css';
 import { workingDays } from "../services/workingDays";
-import { writeInstagramMessage } from '../services/instagram'
+import { openInstagramProfile } from '../services/instagram'
 
 import enero from '../images/calendar/enero.jpg'
 import febrero from '../images/calendar/febrero.jpg'
@@ -32,27 +32,23 @@ const monthBackgrounds = {
 };
 
 export function Calendar() {
+
+  const monthNames = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ];
+
   const today = new Date();
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth(); // 0 = Enero, 11 = Diciembre
+  const currentMonth = currentDate.getMonth();
 
   // Número de días del mes actual
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
   // Día de la semana en el que empieza el mes (0 = Domingo, 6 = Sábado)
   const startDay = new Date(currentYear, currentMonth, 1).getDay();
-
-  // Mover a mes anterior
-  const prevMonth = () => {
-    setCurrentDate(new Date(currentYear, currentMonth - 1, 1));
-  };
-
-  // Mover a mes siguiente
-  const nextMonth = () => {
-    setCurrentDate(new Date(currentYear, currentMonth + 1, 1));
-  };
 
   // Array de días (con huecos al inicio)
   const daysArray = [];
@@ -63,17 +59,18 @@ export function Calendar() {
     daysArray.push(new Date(currentYear, currentMonth, i));
   }
 
-  // Nombres de meses
-  const monthNames = [
-    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-  ];
+  const prevMonth = () => {
+    setCurrentDate(new Date(currentYear, currentMonth - 1, 1));
+  };
+
+  const nextMonth = () => {
+    setCurrentDate(new Date(currentYear, currentMonth + 1, 1));
+  };
 
   return (
     <>
     <div className="calendar">
         <div className="calendar-container">
-            {/* Header */}
             <div className="calendar-header"
             style ={{
                 background: `#262626 ${monthBackgrounds[currentMonth]} no-repeat center / cover`,
@@ -93,11 +90,9 @@ export function Calendar() {
             </div>
 
             <div className="calendar-days">
-                {/* Días de la semana */}
                 {["L", "M", "X", "J", "V", "S", "D"].map((d) => (
                 <div className='calendar-day' key={d}>{d}</div>
                 ))}
-                {/* Días del mes */}
                 {
                 daysArray.map((day, index) => {
                     const isToday =
@@ -111,7 +106,7 @@ export function Calendar() {
                     <div
                     key={index}
                     className={`calendar-number ${!day
-                                    ? "empty-day" // <-- clase para días vacíos
+                                    ? "empty-day"
                                     : isToday
                                     ? "today"
                                     : isPastDay
@@ -126,9 +121,9 @@ export function Calendar() {
                 );
                 })}
             </div>
-            <div className='available-container'>
-                <button className='check-available' onClick={writeInstagramMessage}>Consultar Disponibilidad</button>
-            </div>
+        </div>
+        <div className='available-container'>
+          <button className='check-available' onClick={openInstagramProfile}>CONSULTAR DISPONIBILIDAD</button>
         </div>
     </div>
     </>

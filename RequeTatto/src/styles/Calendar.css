@@ -1,9 +1,10 @@
 .calendar {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: center; 
+  height: 100%; 
   font-family: 'Poppins', sans-serif;
 }
 
@@ -22,7 +23,6 @@
   height: 250px;
   padding: 30px;
   color: #fff;
-  /* background: #262626 url("https://images.unsplash.com/photo-1516912481808-3406841bd33c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=183f2924ba5a8429441804609b2d4f61") no-repeat center / cover; */
   text-shadow: 0 2px 2px rgba(0,0,0,0.2);
   box-sizing: border-box;
   display: flex;
@@ -135,8 +135,12 @@
 }
 
 .check-available{
-  max-width: 300px;
- background-color: white;
+  margin-top: 10%;
+  width: 200px;
+  max-width: 250px;
+  background: linear-gradient(45deg, #252424);
+  color: whitesmoke;
+  border-color: whitesmoke;
   border: 1px solid;
   padding: 12px 24px;
   border-radius: 10px;     
@@ -145,12 +149,13 @@
   font-weight: bold;
   transition: all 0.3s ease;
   background-size: 200% auto; 
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-  color: #000;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+  margin-left: 10%;
 }
 
 .check-available:hover {
   background-position: right center; 
+  background: #fa7e1e;
   transform: scale(1.05);
   box-shadow: 0px 6px 15px rgba(0,0,0,0.35);
 }
