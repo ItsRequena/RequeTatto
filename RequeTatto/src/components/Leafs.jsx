@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
-/* Listado de tatuajes*/
+import { openEliteFightClubLeaf, openGalaxyFcLeaf } from '../services/instagram'
 import elitefightclub from '../images/leafs/elitefightclub.jpg'
 import galaxyfc from '../images/leafs/galaxyfc.jpg'
-
-import { openEliteFightClubLeaf, openGalaxyFcLeaf } from '../services/instagram'
 import '../styles/Leafs.css'
 
 export function Leafs(){

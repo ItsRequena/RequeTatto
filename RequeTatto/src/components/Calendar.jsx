@@ -1,8 +1,6 @@
 import { useState } from "react";
-import '../styles/Calendar.css';
 import { workingDays } from "../services/workingDays";
 import { openInstagramProfile } from '../services/instagram'
-
 import enero from '../images/calendar/enero.jpg'
 import febrero from '../images/calendar/febrero.jpg'
 import marzo from '../images/calendar/marzo.jpg'
@@ -15,6 +13,7 @@ import septiembre from '../images/calendar/septiembre.jpg'
 import octubre from '../images/calendar/octubre.jpg'
 import noviembre from '../images/calendar/noviembre.jpg'
 import diciembre from '../images/calendar/diciembre.jpg'
+import '../styles/Calendar.css';
 
 const monthBackgrounds = {
   0: `url(${enero})`,

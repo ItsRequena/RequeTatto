@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import fotoPerfil from '../images/fotoPerfil.jpg'
-import fotoPerfilBack from '../images/newRequeTattoLogo.png'
-import chicana from '../images/tattos/chicana.jpg'
-import ojoscatrina from '../images/tattos/ojoscatrina.jpg'
 import { openInstagramProfile } from '../services/instagram.js'
 import { openMail } from '../services/openMail'
+import fotoPerfilBack from '../images/newRequeTattoLogo.png'
 import zonazerologo from '../images/zonazerologo.png'
+import ojoscatrina from '../images/tattos/ojoscatrina.jpg'
+import fotoPerfil from '../images/fotoPerfil.jpg'
+import chicana from '../images/tattos/chicana.jpg'
 import '../styles/Main.css'
 
 export function Main(){

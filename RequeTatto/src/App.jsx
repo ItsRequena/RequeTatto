@@ -1,11 +1,11 @@
-import { useState,useContext } from 'react'
-import './App.css'
+import { useContext } from 'react'
+import { TattoGallery } from './components/TattoGallery.jsx'
+import { OptionContext } from './context/option.jsx'
+import { Calendar } from './components/Calendar.jsx'
 import { Menu } from './components/Menu.jsx'
 import { Main } from './components/Main.jsx'
-import { OptionContext } from './context/option.jsx'
-import { TattoGallery } from './components/TattoGallery.jsx'
 import { Leafs } from './components/Leafs.jsx'
-import { Calendar } from './components/Calendar.jsx'
+import './App.css'
 
 function App() {
   const {option, isMenuOpen} = useContext(OptionContext)
