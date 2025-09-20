@@ -33,7 +33,7 @@ export function Main(){
                 <li className='main-li'>
                     <h2 className='fuente'> Sergio Requena</h2>
                     <p className='descripcion'>
-                        Tatuador con amplia experiencia en realismo, especializado en capturar con precisión cada detalle y dotar a sus obras de un acabado natural y expresivo
+                        Tatuador con amplia experiencia en realismo, blackword y microrealismo, especializado en capturar con precisión cada detalle y dotar a sus obras de un acabado natural y expresivo
                     </p>
                     <div className='tattocover'>
                         <img className='imgPortada' alt="Tatuaje portada 1" src={chicana}></img>
