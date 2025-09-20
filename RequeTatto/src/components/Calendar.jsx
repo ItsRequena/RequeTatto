@@ -47,7 +47,7 @@ export function Calendar() {
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
   // Día de la semana en el que empieza el mes (0 = Domingo, 6 = Sábado)
-  const startDay = new Date(currentYear, currentMonth, 1).getDay();
+  const startDay = new Date(currentYear, currentMonth, 0).getDay();
 
   // Array de días (con huecos al inicio)
   const daysArray = [];
